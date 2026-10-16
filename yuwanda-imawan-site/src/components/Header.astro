@@ -1,0 +1,38 @@
+---
+const { lang = 'id', active = '' } = Astro.props;
+const copy = lang === 'en'
+  ? { home: 'Home', about: 'About', projects: 'Projects', blog: 'Blog', contact: 'Contact' }
+  : { home: 'Beranda', about: 'Tentang', projects: 'Proyek', blog: 'Blog', contact: 'Kontak' };
+const prefix = `/${lang}`;
+const otherLang = lang === 'id' ? 'en' : 'id';
+const otherLabel = lang === 'id' ? 'EN' : 'ID';
+const otherPath = Astro.url.pathname.replace(/^\/(id|en)(?=\/|$)/, `/${otherLang}`);
+const links = [
+  { key: 'home', href: `${prefix}/`, label: copy.home },
+  { key: 'about', href: `${prefix}/about/`, label: copy.about },
+  { key: 'projects', href: `${prefix}/projects/`, label: copy.projects },
+  { key: 'blog', href: `${prefix}/blog/`, label: copy.blog },
+  { key: 'contact', href: `${prefix}/contact/`, label: copy.contact },
+];
+---
+<header class="sticky top-0 z-50 border-b border-[#26364b]/90 bg-[#08111f]/90 backdrop-blur-xl">
+  <div class="container flex min-h-[76px] items-center justify-between gap-4">
+    <a href={`/${lang}/`} class="flex items-center gap-3" aria-label="Yuwanda Imawan home">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-[#4ade80] text-[#07111b] font-black">YI</span>
+      <span class="leading-tight"><strong class="block text-sm sm:text-base">Yuwanda Imawan</strong><span class="text-xs text-slate-400">IT Network Engineer</span></span>
+    </a>
+    <nav class="hidden items-center gap-6 md:flex" aria-label="Main navigation">
+      {links.map((link) => <a class={`text-sm transition hover:text-[#4ade80] ${active === link.key ? 'text-[#4ade80]' : 'text-slate-300'}`} href={link.href}>{link.label}</a>)}
+      <a class="rounded-lg border border-[#40516a] px-3 py-2 text-xs font-bold text-slate-100 hover:border-[#4ade80]" href={otherPath} lang={otherLang}>{otherLabel}</a>
+    </nav>
+    <div class="flex items-center gap-2 md:hidden">
+      <a class="rounded-lg border border-[#40516a] px-3 py-2 text-xs font-bold" href={otherPath} lang={otherLang}>{otherLabel}</a>
+      <details class="relative">
+        <summary class="cursor-pointer list-none rounded-lg border border-[#40516a] px-3 py-2 text-sm" aria-label="Open menu">☰</summary>
+        <nav class="absolute right-0 top-12 grid min-w-44 gap-1 rounded-xl border border-[#26364b] bg-[#101c2d] p-2 shadow-xl" aria-label="Mobile navigation">
+          {links.map((link) => <a class="rounded-lg px-3 py-2 text-sm text-slate-200 hover:bg-[#1b2b41]" href={link.href}>{link.label}</a>)}
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

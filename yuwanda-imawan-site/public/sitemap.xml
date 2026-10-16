@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://example.pages.dev/id/</loc><xhtml:link rel="alternate" hreflang="id" href="https://example.pages.dev/id/"/><xhtml:link rel="alternate" hreflang="en" href="https://example.pages.dev/en/"/></url>
+  <url><loc>https://example.pages.dev/id/about/</loc><xhtml:link rel="alternate" hreflang="id" href="https://example.pages.dev/id/about/"/><xhtml:link rel="alternate" hreflang="en" href="https://example.pages.dev/en/about/"/></url>
+  <url><loc>https://example.pages.dev/id/projects/</loc><xhtml:link rel="alternate" hreflang="id" href="https://example.pages.dev/id/projects/"/><xhtml:link rel="alternate" hreflang="en" href="https://example.pages.dev/en/projects/"/></url>
+  <url><loc>https://example.pages.dev/id/blog/</loc><xhtml:link rel="alternate" hreflang="id" href="https://example.pages.dev/id/blog/"/><xhtml:link rel="alternate" hreflang="en" href="https://example.pages.dev/en/blog/"/></url>
+  <url><loc>https://example.pages.dev/id/contact/</loc><xhtml:link rel="alternate" hreflang="id" href="https://example.pages.dev/id/contact/"/><xhtml:link rel="alternate" hreflang="en" href="https://example.pages.dev/en/contact/"/></url>
+  <url><loc>https://example.pages.dev/en/</loc></url>
+  <url><loc>https://example.pages.dev/en/about/</loc></url>
+  <url><loc>https://example.pages.dev/en/projects/</loc></url>
+  <url><loc>https://example.pages.dev/en/blog/</loc></url>
+  <url><loc>https://example.pages.dev/en/contact/</loc></url>
+</urlset>

@@ -1,0 +1,11 @@
+---
+const { lang = 'id' } = Astro.props;
+const text = lang === 'en' ? 'Built with care by Yuwanda Imawan.' : 'Dibangun dengan teliti oleh Yuwanda Imawan.';
+const privacy = lang === 'en' ? 'Independent portfolio. Company details and internal network data are not published.' : 'Portofolio pribadi. Informasi perusahaan dan data jaringan internal tidak dipublikasikan.';
+---
+<footer class="border-t border-[#26364b] py-8">
+  <div class="container flex flex-col justify-between gap-3 text-sm text-slate-400 sm:flex-row sm:items-center">
+    <div><p>{text} © {new Date().getFullYear()}</p><p class="mt-1 text-xs">{privacy}</p></div>
+    <a href={`/${lang}/contact/`} class="font-semibold text-[#4ade80] hover:underline">{lang === 'en' ? 'Get in touch ↗' : 'Hubungi saya ↗'}</a>
+  </div>
+</footer>

@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const projects = [
+ { n:'01', title:'Network Infrastructure & Troubleshooting', category:'Networking', status:'In Progress', text:'A structured approach to investigating connectivity, network segmentation, Wi-Fi, routing, and switching.', stack:['Networking','VLAN','Troubleshooting'] },
+ { n:'02', title:'IT Network Monitoring Lab', category:'Monitoring', status:'Planned', text:'A lab plan for tracking availability, latency, packet loss, and sending alerts to operational channels.', stack:['Ubuntu','Monitoring','Telegram'] },
+ { n:'03', title:'AI-Assisted IT Operations', category:'AI & Automation', status:'In Progress', text:'AI agent workflow experiments to support alert analysis, documentation, and report drafting with human oversight.', stack:['Docker','AI Agent','Automation'] },
+];
+---
+<BaseLayout lang="en" active="projects" title="Projects | Yuwanda Imawan" description="Yuwanda Imawan's networking, monitoring, infrastructure, and AI automation portfolio." canonicalPath="/en/projects/">
+<section class="container section"><p class="eyebrow">PORTFOLIO</p><h1 class="section-title mt-3">Projects & experiments</h1><p class="muted mt-4 max-w-2xl leading-7">A collection of case studies to be developed through documentation and testing. Project status is shown transparently.</p><div class="mt-8 grid gap-5 md:grid-cols-2">{projects.map((p)=><article class="panel card-link p-6"><div class="flex items-center justify-between"><span class="eyebrow">PROJECT {p.n}</span><span class="tag">{p.status}</span></div><p class="muted mt-5 text-xs">{p.category}</p><h2 class="mt-2 text-2xl font-extrabold">{p.title}</h2><p class="muted mt-3 leading-7">{p.text}</p><div class="mt-5 flex flex-wrap gap-2">{p.stack.map((s)=><span class="tag">{s}</span>)}</div><div class="mt-6 border-t border-[#26364b] pt-4 text-sm text-slate-400">Planned documentation: goals · architecture · implementation · test results</div></article>)}</div><p class="muted mt-6 text-xs">Projects marked Planned or In Progress must not be presented as completed implementations.</p></section>
+</BaseLayout>

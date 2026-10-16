@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const projects = [
+ { n:'01', title:'Network Infrastructure & Troubleshooting', category:'Networking', status:'In Progress', text:'Dokumentasi pendekatan sistematis untuk investigasi konektivitas, segmentasi jaringan, Wi-Fi, routing, dan switching.', stack:['Networking','VLAN','Troubleshooting'] },
+ { n:'02', title:'IT Network Monitoring Lab', category:'Monitoring', status:'Planned', text:'Rancangan lab untuk memantau availability, latency, packet loss, dan mengirim alert ke kanal operasional.', stack:['Ubuntu','Monitoring','Telegram'] },
+ { n:'03', title:'AI-Assisted IT Operations', category:'AI & Automation', status:'In Progress', text:'Eksperimen workflow AI Agent untuk membantu analisis alert, dokumentasi, dan penyusunan laporan dengan pengawasan manusia.', stack:['Docker','AI Agent','Automation'] },
+];
+---
+<BaseLayout lang="id" active="projects" title="Proyek | Yuwanda Imawan" description="Portofolio proyek networking, monitoring, infrastruktur, dan AI automation oleh Yuwanda Imawan." canonicalPath="/id/projects/">
+<section class="container section"><p class="eyebrow">PORTFOLIO</p><h1 class="section-title mt-3">Proyek & eksperimen</h1><p class="muted mt-4 max-w-2xl leading-7">Kumpulan studi kasus yang akan dikembangkan berdasarkan dokumentasi dan pengujian. Status proyek ditampilkan apa adanya.</p><div class="mt-8 grid gap-5 md:grid-cols-2">{projects.map((p)=><article class="panel card-link p-6"><div class="flex items-center justify-between"><span class="eyebrow">PROJECT {p.n}</span><span class="tag">{p.status}</span></div><p class="muted mt-5 text-xs">{p.category}</p><h2 class="mt-2 text-2xl font-extrabold">{p.title}</h2><p class="muted mt-3 leading-7">{p.text}</p><div class="mt-5 flex flex-wrap gap-2">{p.stack.map((s)=><span class="tag">{s}</span>)}</div><div class="mt-6 border-t border-[#26364b] pt-4 text-sm text-slate-400">Rencana dokumentasi: tujuan · arsitektur · implementasi · hasil uji</div></article>)}</div><p class="muted mt-6 text-xs">Proyek berstatus Planned atau In Progress belum boleh dipresentasikan sebagai implementasi selesai.</p></section>
+</BaseLayout>
