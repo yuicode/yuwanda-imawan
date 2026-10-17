@@ -2,5 +2,44 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout lang="en" active="about" title="About Me | Yuwanda Imawan" description="Meet Yuwanda Imawan, an IT Network Engineer focused on networking, infrastructure, monitoring, and IT automation." canonicalPath="/en/about/">
-  <section class="container section"><p class="eyebrow">ABOUT ME</p><h1 class="section-title mt-3">About Yuwanda</h1><div class="mt-8 grid gap-8 md:grid-cols-[.7fr_1.3fr]"><div class="panel grid min-h-64 place-items-center p-8"><div class="text-center"><div class="mx-auto grid h-28 w-28 place-items-center rounded-full border border-dashed border-[#4ade80] bg-[#4ade80]/10 text-4xl font-black text-[#4ade80]">YI</div><p class="muted mt-4 text-sm">Profile photo placeholder</p></div></div><div class="prose-content"><h2>Solution-oriented IT practitioner</h2><p>I'm Yuwanda Imawan, an IT Network Engineer interested in computer networking, server infrastructure, monitoring, and IT operations automation.</p><p>Through this website, I document learning, lab experiments, and troubleshooting approaches so technical knowledge can be reviewed, tested, and improved.</p><h2>Areas of focus</h2><ul><li>Network infrastructure: routing, switching, VLANs, Wi-Fi, and connectivity.</li><li>Servers & systems: Linux, Ubuntu Server, Docker, and operational documentation.</li><li>Monitoring: availability, latency, alerting, and incident investigation.</li><li>AI & automation: exploring safe ways to support IT workflows with AI.</li></ul><p class="text-sm">Note: add verifiable work experience, education, and certifications before publishing them.</p></div></div></section>
+  <section class="container section">
+    <p class="eyebrow">ABOUT ME</p>
+    <h1 class="section-title mt-3">About Yuwanda</h1>
+    <div class="mt-8 grid gap-8 md:grid-cols-[.7fr_1.3fr]">
+      
+      <!-- Panel Foto Profil (Diganti dengan foto asli profile.png) -->
+      <div class="panel relative overflow-hidden p-6 sm:p-8 border border-slate-800 bg-[#0a1525]">
+        <div class="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#4ade80]/10 blur-3xl"></div>
+        
+        <div class="relative mx-auto aspect-square max-w-[290px] overflow-hidden rounded-[2rem] border border-[#4ade80]/40 bg-[#030712] shadow-2xl">
+          <img 
+            src="/images/profile.png" 
+            alt="Yuwanda Imawan - IT Network Engineer" 
+            class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500"
+          />
+        </div>
+
+        <div class="mt-4 text-center">
+          <p class="font-bold text-white">Yuwanda Imawan</p>
+          <p class="text-xs text-[#4ade80]">IT Network Engineer</p>
+        </div>
+      </div>
+
+      <div class="prose-content">
+        <h2>Solution-oriented IT practitioner</h2>
+        <p>I'm Yuwanda Imawan, an IT Network Engineer interested in computer networking, server infrastructure, monitoring, and IT operations automation.</p>
+        <p>Through this website, I document learning, lab experiments, and troubleshooting approaches so technical knowledge can be reviewed, tested, and improved.</p>
+        
+        <h2>Areas of focus</h2>
+        <ul>
+          <li>Network infrastructure: routing, switching, VLANs, Wi-Fi, and connectivity.</li>
+          <li>Servers & systems: Linux, Ubuntu Server, Docker, and operational documentation.</li>
+          <li>Monitoring: availability, latency, alerting, and incident investigation.</li>
+          <li>AI & automation: exploring safe ways to support IT workflows with AI.</li>
+        </ul>
+        <p class="text-sm">Note: add verifiable work experience, education, and certifications before publishing them.</p>
+      </div>
+
+    </div>
+  </section>
 </BaseLayout>
